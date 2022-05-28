@@ -62,7 +62,7 @@ int main()
         case 2:
             printf(ANSI_COLOR_BLUE "%s", det2);
         default:
-            printf(ANSI_COLOR_RED "Veuillez saisir: 1 ou 2");
+            printf(ANSI_COLOR_RED "Veuillez saisir: 1 ou 2 \n");
         }
     }
     else
@@ -89,7 +89,7 @@ int main()
             printf(ANSI_COLOR_BLUE "%s", det3);
             break;
         default:
-            printf(ANSI_COLOR_RED "Veuillez saisir: 1, 2 ou 3");
+            printf(ANSI_COLOR_RED "Veuillez saisir: 1, 2 ou 3 \n");
         }
     }
 
