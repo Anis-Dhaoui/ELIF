@@ -60,11 +60,6 @@ int main()
             printf(ANSI_COLOR_YELLOW "%s 1725 \n", niveau1);
         }else{
             affNiv = false;
-            printf("Pas de niveau... Le service est injoignable pour le moment veuillez réessayer ultérieurement \n");
-        }
-        if(affNiv){
-            printf(ANSI_COLOR_GREEN "Veuillez choisir le niveau de prestations souhaité :");
-            scanf("%d", &choix);
         }
 
     }
@@ -79,16 +74,12 @@ int main()
             printf(ANSI_COLOR_YELLOW "%s 1500 \n", niveau1);
         }else{
             affNiv = false;
-            printf("Le service est injoignable pour le moment veuillez réessayer ultérieurement");
-        }
-
-        if(affNiv){
-            printf(ANSI_COLOR_GREEN "Veuillez choisir le niveau de prestations souhaité :");
-            scanf("%d", &choix);
         }
     }
-
+// Si le budget est inferieur a les tarifs de cotisations alors ne pas afficher aucun niveaux 
     if(affNiv){
+        printf(ANSI_COLOR_GREEN "Veuillez choisir le niveau de prestations souhaité :");
+        scanf("%d", &choix);
         switch (choix){
             case 1:
                 printf(ANSI_COLOR_BLUE "%s", detniv1);
@@ -102,6 +93,8 @@ int main()
             default:
                 printf(ANSI_COLOR_RED "Veuillez saisir: 1, 2 ou 3 \n");
         }
+    }else{
+        printf("Aucun niveau Disponible... Le service est injoignable pour le moment veuillez réessayer ultérieurement \n");
     }
     return 0;
 }
