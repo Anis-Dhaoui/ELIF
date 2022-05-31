@@ -44,7 +44,6 @@ int main()
     // convertir la taille depuis centimetre vers metre pour calculer le IMC
     taille = (float) taille / 100;
     IMC = poids / (taille * taille);
-    printf("%f \n", IMC);
 
     if (interChir == 1 || arrTra == 1 || desOrol != 0){
         printf("HAUT RISQUE: Désolé tu es rejeté \n");
