@@ -45,7 +45,7 @@ int main()
     taille = (float) taille / 100;
     IMC = poids / (taille * taille);
 
-    if (interChir == 1 || arrTra == 1 || desOrol != 0){
+    if (interChir == 1 || arrTra == 1 || desOrol  == (2 || 3 || 5)){
         printf("HAUT RISQUE: Désolé tu es rejeté \n");
     }
     else if (2022 - dateNaissance > 50 || desOrol == 1 || IMC < 16.5 || IMC > 30){
