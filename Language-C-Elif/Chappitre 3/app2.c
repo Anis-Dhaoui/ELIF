@@ -1,84 +1,65 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
 
-int main()
-{
+int main() {
     srand(time(NULL));
-    int raNiv1 = rand() % 100 + 1, raNiv2 = rand() % 10000 + 1, xx;
-    printf("%d\n", raNiv1);
-    int choix, tenta = 3, nivChoisi;
-    char niv1[] = "1-Niveau 1: Facile, Le mystère est un nombre entre 0 et 100";
-    char niv2[] = "2-Niveau 2: Moyen, Le mystère est un nombre entre 0 et 10000";
+    int raNum, shot, choix, tenta = 3;
 
-    do
-    {
-        printf("%s\n%s\n", niv1, niv2);
+    do {
+        printf("1-Niveau 1: Facile, Le mystère est un nombre entre 0 et 100\n");
+        printf("2-Niveau 2: Moyen, Le mystère est un nombre entre 0 et 10000\n");
         printf("Tappez 0 pour quiter\n");
         scanf("%d", &choix);
     } while (choix < 0 || choix > 2);
 
-    if (choix == 1)
-    {
+    if (choix == 1) {
+        raNum = rand() % 100 + 1;
+        printf("Numero hazard du niveau 1 = %d\n", raNum); // objectif du test
         printf("Niveau facile: Le mystere est un nombre entre 0 et 100\n");
         printf("Saisir un numero entre 1 et 100\n");
-        scanf("%d", &xx);
-
-        do
-        {
-            if (xx < raNiv1)
-            {
+        scanf("%d", &shot);
+        do {
+            if (shot < raNum) {
                 tenta--;
-                printf("Choisissez un numero superiuer a %d \n", xx);
+                printf("Choisissez un numero superiuer a %d \n", shot);
                 printf("il vous reste %d tentatives\n", tenta);
-                scanf("%d", &xx);
-            }
-            else if (xx > raNiv1)
-            {
+                scanf("%d", &shot);
+            } else if (shot > raNum) {
                 tenta--;
-                printf("Choisissez un numero inferieur a %d\n", xx);
+                printf("Choisissez un numero inferieur a %d\n", shot);
                 printf("il vous reste %d tentatives\n", tenta);
-                scanf("%d", &xx);
+                scanf("%d", &shot);
             }
-            else
-            {
-                printf("BRAVO\n");
-            }
-        } while ((xx != raNiv1) && (tenta != 1));
-    }
-
-    else if (choix == 2)
-    {
+        } while (shot != raNum && tenta != 1);
+    } else if (choix == 2) {
+        raNum = rand() % 10000 + 1;
+        printf("Numero hazard du niveau 2 = %d\n", raNum); // objectif du test
         printf("Niveau moyen: Le mystere est un nombre entre 0 et 10000\n");
         printf("Saisir un numero entre 1 et 10000\n");
-        scanf("%d", &xx);
-
-        do
-        {
-            if (xx > raNiv2)
-            {
+        scanf("%d", &shot);
+        do {
+            if (shot > raNum) {
                 tenta--;
-                printf("Choisissez un numero superiuer a %d \n", xx);
+                printf("Choisissez un numero superiuer a %d \n", shot);
                 printf("il vous reste %d tentatives\n", tenta);
-                scanf("%d", &xx);
-            }
-            else if (xx < raNiv2)
-            {
+                scanf("%d", &shot);
+            } else if (shot < raNum) {
                 tenta--;
-                printf("Choisissez un numero inferieur a %d\n", xx);
+                printf("Choisissez un numero inferieur a %d\n", shot);
                 printf("il vous reste %d tentatives\n", tenta);
-                scanf("%d", &xx);
+                scanf("%d", &shot);
             }
-            else
-            {
-                printf("BRAVO\n");
-            }
-        } while ((xx != raNiv2) && (tenta != 1));
+        } while (shot != raNum && tenta != 1);
+    } else {
+        printf("\n\nAU REVOIR\n\n");
     }
 
-    else
-    {
-        printf("AU REVOIR\n");
+    if (tenta >= 1 && shot == raNum) {
+        printf("\n\nBRAVO\n\n");
+    } else {
+        printf("\n\nGAME OVER\n\n");
     }
+
     return 0;
 }
