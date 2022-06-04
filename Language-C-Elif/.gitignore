@@ -1,2 +1,7 @@
-#ignorer tous les fichies qui n'a pas un extension
+##ignorer tous les fichies qui n'a pas un extension
+#ignorer quoi que ce soit
+*
+#pas ignorer les repertoires
+!*/ 
+#pas ignorer les fichies ont une extension
 !*.*
