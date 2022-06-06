@@ -4,7 +4,7 @@
 
 int main() {
     srand(time(NULL));
-    int raNum, shot, choix, tenta = 3;
+    int raNum, shot, choix, tenta = 15;
 
     do {
         printf("1-Niveau 1: Facile, Le mystère est un nombre entre 0 et 100\n");
@@ -15,7 +15,7 @@ int main() {
 
     if (choix == 1) {
         raNum = rand() % 100 + 1;
-        printf("Numero hazard du niveau 1 = %d\n", raNum); // objectif du test
+        //printf("Numero hazard du niveau 1 = %d\n", raNum); // objectif du test
         printf("Niveau facile: Le mystere est un nombre entre 0 et 100\n");
         printf("Saisir un numero entre 1 et 100\n");
         scanf("%d", &shot);
