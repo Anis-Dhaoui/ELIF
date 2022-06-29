@@ -2,11 +2,12 @@ import java.util.*;
 
 class Ex2 {
     public static void main(String args[]) {
-        int tab[];
-        tab = new int[3];
+        // int[] tab = {40, 5, 4, 0, 4, 4, 4};
+        int[] tab;
+        tab = new int[7];
         Scanner sc = new Scanner(System.in);
         int num;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 7; i++) {
             do {
                 System.out.println("Donner un valeur pour la colone " + (i + 1));
                 num = sc.nextInt();
@@ -21,8 +22,11 @@ class Ex2 {
         System.out.println();
 
         int min = tab[0];
-        int max = tab[tab.length];
+        int max = tab[tab.length - 1];
         int moy = tab[tab.length / 2];
+        System.out.println(tab.length);
+
+        // int som = 0;
         // int posMin = 0, posMax = 0, posMoy = 0;
         // for (int i = 0; i < tab.length; i++) {
         //     if (tab[i] > max) {
@@ -37,8 +41,9 @@ class Ex2 {
         //     // som = som + tab[i];
         // }
 
-        System.out.println("Max = " + max + " dans la position " + tab.length);
         System.out.println("Min = " + min + " dans la position " + 0);
+        System.out.println("Max = " + max + " dans la position " + (tab.length - 1));
         System.out.println("Moyenne = " + moy + " dans la position " + (tab.length / 2));
+        // System.out.println("Moyenne = " + (som / tab.length));
     }
 }
