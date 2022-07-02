@@ -4,6 +4,9 @@
  */
 package com.tuniprod.magasin;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 /**
  *
  * @author f2c
@@ -13,6 +16,8 @@ public class Produit {
     String lib;
     String marq;
     float prix;
+    Date datExp;
+//  LocalDate datExp;
     
     public Produit(){}
     
@@ -30,7 +35,7 @@ public class Produit {
     }
         
     void afficher(){
-        System.out.println("id: " + id + " libelee: " + lib + " marque: " + marq + " prix: " + prix);
+        System.out.println("id: " + id + " libelee: " + lib + " marque: " + marq + " prix: " + prix + " Date-Exp: " + datExp);
     }
     
     public String toString(){
