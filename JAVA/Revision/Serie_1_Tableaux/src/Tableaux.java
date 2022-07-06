@@ -29,7 +29,11 @@ public class Tableaux {
         afficher(max(tab));
         afficher(maxPos(tab));
         
+        afficher(moyenne(tab));
+        
         afficher(produit(tab));
+        
+        afficher(nbPositive(tab));
     }
     
     
@@ -40,7 +44,7 @@ public class Tableaux {
         do{
             System.out.println("Donner la taille de tableau: ");
             taille = sc.nextInt();
-        }while(taille < 0);
+        }while(taille == 0);
     }
     
     static void afficher(int show){
@@ -87,11 +91,29 @@ public class Tableaux {
         return pos;
     }
     
-    static int produit(int t[]){
+    static int moyenne(int t[]){
         int som = 0;
         for(int i = 0; i < taille; i++){
             som += t[i];
         }
         return som / taille;
+    }
+    
+    static int produit(int t[]){
+        int prod = 1;
+        for(int i = 0; i < taille; i++){
+            prod *= t[i];
+        }
+        return prod;
+    }
+    
+    static int nbPositive(int t[]){
+        int nbPos = 0;
+        for(int i = 0; i < taille; i++){
+            if(t[i] > 0){
+                nbPos += 1;
+            }
+        }
+        return nbPos;
     }
 }
