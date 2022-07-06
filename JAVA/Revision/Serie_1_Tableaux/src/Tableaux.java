@@ -34,6 +34,10 @@ public class Tableaux {
         afficher(produit(tab));
         
         afficher(nbPositive(tab));
+        
+        System.out.println(chercher(tab, 5));
+        
+        System.out.println(chercherPosition(tab, 5));
     }
     
     
@@ -115,5 +119,24 @@ public class Tableaux {
             }
         }
         return nbPos;
+    }
+    
+    static boolean chercher(int t[], int x){
+        for(int i = 0; i < taille; i++){
+            if(t[i] == x){
+                return true;
+            }
+//            break;
+        }
+        return false;
+    }
+    
+    static int chercherPosition(int t[], int x){
+        for(int i = 0; i < taille; i++){
+            if(chercher(t, x)){
+                return i;
+            }
+        }
+        return -1;
     }
 }
