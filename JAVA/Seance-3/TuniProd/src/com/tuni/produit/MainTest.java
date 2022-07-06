@@ -8,7 +8,7 @@ public class MainTest {
     
     Produit produit1 = new Produit();
     Produit produit2 = new Produit (50,"Lait","Vitalait");
-    Produit produit3 = new Produit(5,"Lait","Vitalait");
+    Produit produit3 = new Produit(50,"Lait","Vitalait");
     Produit produit4 = new Produit (3250,"Tomate","Sicam",1.200f);
    
 //    produit1.affichier();
@@ -36,7 +36,7 @@ public class MainTest {
     System.out.println(m1.toString());
     System.out.println(m1.getCapaciteMagasin());
     
-    System.out.println(produit2.comparer(produit3));
-    
+//    System.out.println(produit2.comparer(produit3));
+    System.out.println(Produit.comparerNdMeth(produit2, produit3));
    }
 }

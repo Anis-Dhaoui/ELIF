@@ -74,4 +74,12 @@ public class Produit {
        }
        return false;
    }
+   
+      public static boolean comparerNdMeth(Produit p1, Produit p2){
+          
+       if(p1.identifient == p2.identifient){
+           return true;
+       }
+       return false;
+   }
 }
