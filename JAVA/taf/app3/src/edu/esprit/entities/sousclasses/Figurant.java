@@ -32,5 +32,4 @@ public class Figurant {
     public void afficher() {
         System.out.println("Identifiant: " + this.idFigurant + "\nNom: " + this.nomFigurant + "\nPays:: " + this.paysFigurant + "\n");
     }
-    
 }
