@@ -32,6 +32,7 @@ public class ClientParticulier extends Client {
         System.out.println("Je paie");
     }
     
+    @Override
     public void acheter() {
         System.out.println("Je suis un CP");
     }

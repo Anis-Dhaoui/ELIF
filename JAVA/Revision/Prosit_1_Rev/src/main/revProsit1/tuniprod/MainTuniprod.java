@@ -45,8 +45,12 @@ public class MainTuniprod {
             
             //Q8
             SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-            Date date = formatter.parse("20-05-2022");
-            p1.setDateExp(date);
+
+            p1.setDateExp(formatter.parse("20-05-2022"));
+            p2.setDateExp(formatter.parse("25-08-2023"));
+            p3.setDateExp(formatter.parse("30-10-2024"));
             p1.afficher();
+            p2.afficher();
+            p3.afficher();
         }
 }
