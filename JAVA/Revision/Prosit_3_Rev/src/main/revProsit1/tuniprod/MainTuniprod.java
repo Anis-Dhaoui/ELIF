@@ -32,24 +32,24 @@ public class MainTuniprod {
             
             //Question 1:
             //a:
-//            System.out.println(p3.comparer(new Produit(3250, "Tomate", "Sicam", -10)));
-//            System.out.println(p1.comparer(new Produit(123, "xxxx", "yyyy", 457)));
-//            //b:
-//            System.out.println(Produit.comparer2Prod(p1, p2));
-//            System.out.println(Produit.comparer2Prod(p1, p1));
+            System.out.println(p3.comparer(new Produit(3250, "Tomate", "Sicam", -10)));
+            System.out.println(p1.comparer(new Produit(123, "xxxx", "yyyy", 457)));
+            //b:
+            System.out.println(Produit.comparer2Prod(p1, p2));
+            System.out.println(Produit.comparer2Prod(p1, p1));
             //Question 2:
-//            System.out.println(m2.chercheProd(p3));
-//            
-//            //Question 3:
-//            m1.ajoutProd(p1);
-//            //Produit déja exist
-//            m1.ajoutProd(p3);
+            System.out.println(m2.chercheProd(p3));
+            
+            //Question 3:
+            m1.ajoutProd(p1);
+            //Produit déja exist
+            m1.ajoutProd(p3);
             //Produit ajouté avec succés
             
             //Question 4:
-//            System.out.println(m2.toString());
-//            m2.supprimerProd(p3);
-//            System.out.println(m2.toString());
+            System.out.println(m2.toString());
+            m2.supprimerProd(p3);
+            System.out.println(m2.toString());
             
             //Question 5:
             m1.higherProd(m2);

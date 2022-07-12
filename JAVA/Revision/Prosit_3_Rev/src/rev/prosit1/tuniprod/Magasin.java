@@ -84,11 +84,11 @@ public class Magasin {
         }
         capacite--;
     }
-    
-    public void higherProd(Magasin m){
-        if(m.getCapacite() > this.getCapacite()){
+
+    public void higherProd(Magasin m) {
+        if (m.getCapacite() > this.getCapacite()) {
             System.out.println(m.toString());
-        }else{
+        } else {
             System.out.println(this.toString());
         }
     }

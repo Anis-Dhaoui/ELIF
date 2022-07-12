@@ -2,27 +2,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package tn.tuniprob.gestionmagasin;
+package rev.prosit1.tuniprod;
 
 /**
  *
  * @author f2c
  */
-public class Employes {
+public class Employee {
+
     private int id;
     private String nom;
     private String adresse;
-    private int nbr_heures;
-    
+    private float nb_heurs;
 
-    public Employes() {
+    public Employee() {
     }
 
-    public Employes(int id, String nom, String adresse, int nbr_heures) {
+    public Employee(int id, String nom, String adresse, float nb_heurs) {
         this.id = id;
         this.nom = nom;
         this.adresse = adresse;
-        this.nbr_heures = nbr_heures;
+        this.nb_heurs = nb_heurs;
     }
 
     public int getId() {
@@ -48,19 +48,18 @@ public class Employes {
     public void setAdresse(String adresse) {
         this.adresse = adresse;
     }
-    
-    
-    public int getNbr_heures() {
-        return nbr_heures;
+
+    public float getNb_heurs() {
+        return nb_heurs;
     }
 
-    public void setNbr_heures(int nbr_heures) {
-        this.nbr_heures = nbr_heures;
+    public void setNb_heurs(float nb_heurs) {
+        this.nb_heurs = nb_heurs;
     }
-    
-    
+
     @Override
-        public String toString() {
-        return "Employes{" + "id=" + id + ", nom=" + nom + ", adresse=" + adresse + ", nombre d'heures=" + nbr_heures + '}';
+    public String toString() {
+        return "\nIdentifiant: " + this.id + "\nNom: " + this.nom + "\nAdresse: " + this.adresse
+                + "\nNombre d'heures: " + this.nb_heurs + "\n";
     }
 }
