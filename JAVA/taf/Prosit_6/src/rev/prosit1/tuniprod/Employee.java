@@ -8,7 +8,7 @@ package rev.prosit1.tuniprod;
  *
  * @author f2c
  */
-public abstract class Employee {
+public class Employee {
 
     private int id;
     private String nom;
@@ -56,9 +56,7 @@ public abstract class Employee {
     public void setNb_heurs(float nb_heurs) {
         this.nb_heurs = nb_heurs;
     }
-    
-    public abstract void calculerSalaire();
-    
+
     @Override
     public String toString() {
         return "\nIdentifiant: " + this.id + "\nNom: " + this.nom + "\nAdresse: " + this.adresse

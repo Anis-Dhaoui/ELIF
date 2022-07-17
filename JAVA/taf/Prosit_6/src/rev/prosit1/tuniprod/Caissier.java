@@ -25,21 +25,10 @@ public class Caissier extends Employee {
         this.numeroDeCaisse = numeroDeCaisse;
     }
 
-    public void calculerSalaire() {
-        final float MONTANT_PAR_HEURE = 5f;
-        float heureSup = this.getNb_heurs() - 180;
-        if (heureSup < 0) {
-            heureSup = 0;
-        }
-        float montantHeuresSup = heureSup * MONTANT_PAR_HEURE * 1.15f;
-        float montantHeuresNormales = (this.getNb_heurs() - heureSup) * MONTANT_PAR_HEURE;
-        float res = montantHeuresSup + montantHeuresNormales;
-        System.out.println("Le montant total est " + res);
-    }
-
     @Override
     public String toString() {
-        return super.toString() + "\nNumero de caisse: " + this.numeroDeCaisse;
+        return "\nIdentifiant: " + getId() + "\nNom: " + getNom() + "\nAdresse: " + getAdresse()
+                     + "\nNombre d'heures: " + getNb_heurs() + "\nNumero de caisse: " + this.numeroDeCaisse;
     }
 
 }

@@ -44,7 +44,7 @@ public class MainTuniprod {
         Vendeur v4 = new Vendeur(110, 4, "Omar Zawali", "Ben Garden", 8);
 
         Responsable r1 = new Responsable(221.5f, 1, "Abou Baker", "Irak", 2);
-        Responsable r2 = new Responsable(125.8f, 2, "Raouf Donya", "Baghdad", 4);
+        Responsable r2 = new Responsable(125.8f, 1, "Raouf Donya", "Baghdad", 4);
 
         m1.ajoutEmp(c1);
         m1.ajoutEmp(c2);
@@ -71,21 +71,18 @@ public class MainTuniprod {
         m2.ajoutProd(p3);
 
         //Question 5:
-//        System.out.println("*********************** Magasin 1 ***********************");
-//        System.out.println(m1.toString());
-//        System.out.println("*********************** Magasin 2 ***********************");
-//        System.out.println(m2.toString());
-        
-        // Question 6:
-        System.out.println("***********");
-        c1.calculerSalaire();
-        v2.calculerSalaire();
-        r2.calculerSalaire();
-        
-        //Question 7:
-        
-        
-        //Question 8:
-        m1.affichePrimeResponsable(r2);
+        System.out.println("*********************** Magasin 1 ***********************");
+        System.out.println(m1.toString());
+        System.out.println("*********************** Magasin 2 ***********************");
+        System.out.println(m2.toString());
     }
+    
+    /////////////////////////// Prosit 6: ///////////////////////////
+    ///Question 4:
+    ////ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+   //// Nous pouvons pas ajouter 3 produits car la taille de tableau est seulement 3
+    
+    ///Question 5:
+    ////J'ai utiliser Try catch puis j'ai modifié le type de la taille de tableau du "final" vers "int" et en "catch" juste incrementer la taille +1
+   ////accer a la methode ajoutProd pour voir la modification
 }

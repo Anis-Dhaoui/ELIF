@@ -18,6 +18,9 @@ public class Magasin {
     private Employee empTab[];
     private int capacitEmp;
 
+    // final int prodTabSize = 2;
+    int prodTabSize = 2;
+
     public Magasin() {
     }
 
@@ -25,7 +28,7 @@ public class Magasin {
         this.id = id;
         this.nom = nom;
         this.adresse = adresse;
-        prodTab = new Produit[50];
+        prodTab = new Produit[prodTabSize];
         empTab = new Employee[20];
     }
 
@@ -65,13 +68,36 @@ public class Magasin {
         return capacitEmp;
     }
 
-    public void ajoutProd(Produit prod) {
+    //Question 5:
+/*    public void ajoutProd(Produit prod) {
         if (!chercheProd(prod)) {
-            if (capacite <= 50) {
+            try {
                 prodTab[capacite] = prod;
                 capacite++;
-                System.out.println("Produit ajouté avec succés");
+            } catch (Exception ex) {
+                prodTabSize += 1;
             }
+            System.out.println("Produit ajouté avec succés");
+        } else {
+            System.out.println("Prouit déja exist");
+        }
+    }
+     */
+    public void ajoutProd(Produit prod) throws MagasinPleinException, PrixNegatifException {
+        if (!chercheProd(prod)) {
+            if (capacite > prodTabSize) {
+                if(prod.getPrix() > 0){
+                                    prodTab[capacite] = prod;
+                capacite++;
+                System.out.println("Produit ajouté avec succés");
+                }else{
+                    throw new PrixNegatifException("Prix negative?!! es-tu sérieux");
+                }
+
+            } else {
+                throw new MagasinPleinException("Le magasin est plein");
+            }
+
         } else {
             System.out.println("Prouit déja exist");
         }
@@ -116,14 +142,8 @@ public class Magasin {
             capacitEmp++;
         }
     }
-    
-    
-    public void affichePrimeResponsable(Responsable rs){
-        System.out.println("Prime: " + rs.getPrime());
-    }
-    
     public static final String ANSI_GREEN = "\u001B[32m";
-    
+
     @Override
     public String toString() {
         String prodList = "";
@@ -135,9 +155,8 @@ public class Magasin {
         for (int i = 0; i < capacitEmp; i++) {
             empList += empTab[i];
         }
-        
-        return "Identifiant: " + this.id + "\nNom: " + this.nom + "\nAdresse: " + this.adresse +
-                     "\nCapacité:" + this.capacite + "\n" + ANSI_GREEN + "Produit:[\n" + prodList + "\n]" + "\n" + ANSI_GREEN + "Employés:[\n" + empList + "\n]";
+        return "Identifiant: " + this.id + "\nNom: " + this.nom + "\nAdresse: " + this.adresse
+                + "\nCapacité:" + this.capacite + "\n" + ANSI_GREEN + "Produit:[\n" + prodList + "\n]" + "\n" + ANSI_GREEN + "Employés:[\n" + empList + "\n]";
     }
 
 }

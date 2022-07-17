@@ -25,13 +25,9 @@ public class Vendeur extends Employee {
         this.tauxDeVente = tauxDeVente;
     }
 
-    public void calculerSalaire() {
-        float res = 450 * this.tauxDeVente;
-        System.out.println("Le montant total est " + res);
-    }
-
     @Override
     public String toString() {
-        return super.toString() + "\nTaux de vente: " + this.tauxDeVente;
+        return "\nIdentifiant: " + getId() + "\nNom: " + getNom() + "\nAdresse: " + getAdresse()
+                + "\nNombre d'heures: " + getNb_heurs() + "\nTaux de vente: " + this.tauxDeVente;
     }
 }

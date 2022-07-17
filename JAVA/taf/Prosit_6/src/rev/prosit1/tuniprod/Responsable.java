@@ -25,20 +25,9 @@ public class Responsable extends Employee {
         this.prime = prime;
     }
 
-    public void calculerSalaire() {
-        final float MONTANT_PAR_HEURE = 10f;
-        float heureSup = this.getNb_heurs() - 160;
-        if (heureSup < 0) {
-            heureSup = 0;
-        }
-        float montantHeuresSup = heureSup * MONTANT_PAR_HEURE * 1.2f;
-        float montantHeuresNormales = (this.getNb_heurs() - heureSup) * MONTANT_PAR_HEURE;
-        float res = montantHeuresSup + montantHeuresNormales + this.prime;
-        System.out.println("Le montant total est " + res);
-    }
-
     @Override
     public String toString() {
-        return super.toString() + "\nPrime: " + this.prime;
+        return "\nIdentifiant: " + getId() + "\nNom: " + getNom() + "\nAdresse: " + getAdresse()
+                + "\nNombre d'heures: " + getNb_heurs() + "\nPrime: " + this.prime;
     }
 }
