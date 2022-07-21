@@ -11,7 +11,7 @@ import rev.prosit1.tuniprod.Vendeur;
 
 public class MainTuniprod {
 
-    public static void main(String arg[]) throws ParseException {
+    public static void main(String arg[]) throws Exception {
         //QUELQUE INSTRUCTION DE PROSIT 1
         Produit p1 = new Produit(1021, "Lait", "Delice");
         Produit p2 = new Produit(2510, "Yayourt", "Vitalait");
@@ -64,15 +64,15 @@ public class MainTuniprod {
 //        }
 
         //Question 4:
-        m1.ajoutProd(p1);
-        m1.ajoutProd(p2);
+//        m1.ajoutProd(p1);
+//        m1.ajoutProd(p2);
         m2.ajoutProd(p1);
         m2.ajoutProd(p2);
         m2.ajoutProd(p3);
 
         //Question 5:
         System.out.println("*********************** Magasin 1 ***********************");
-        System.out.println(m1.toString());
+//        System.out.println(m1.toString());
         System.out.println("*********************** Magasin 2 ***********************");
         System.out.println(m2.toString());
     }
@@ -80,7 +80,7 @@ public class MainTuniprod {
     /////////////////////////// Prosit 6: ///////////////////////////
     ///Question 4:
     ////ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
-   //// Nous pouvons pas ajouter 3 produits car la taille de tableau est seulement 3
+   //// Nous pouvons pas ajouter 3 produits car la taille de tableau est seulement 2
     
     ///Question 5:
     ////J'ai utiliser Try catch puis j'ai modifié le type de la taille de tableau du "final" vers "int" et en "catch" juste incrementer la taille +1

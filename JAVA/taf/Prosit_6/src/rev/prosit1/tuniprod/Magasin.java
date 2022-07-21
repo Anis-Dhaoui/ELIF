@@ -69,20 +69,22 @@ public class Magasin {
     }
 
     //Question 5:
-/*    public void ajoutProd(Produit prod) {
-        if (!chercheProd(prod)) {
-            try {
-                prodTab[capacite] = prod;
-                capacite++;
-            } catch (Exception ex) {
-                prodTabSize += 1;
-            }
-            System.out.println("Produit ajouté avec succés");
-        } else {
-            System.out.println("Prouit déja exist");
-        }
-    }
-     */
+//    public void ajoutProd(Produit prod) {
+//        if (!chercheProd(prod)) {
+//            try {
+//                System.out.println("Try invoked...");
+//                prodTab[capacite] = prod;
+//                capacite++;
+//                System.out.println("Produit ajouté avec succés");
+//            } catch (Exception ex) {
+//                System.out.println("Catch invoked...");
+//                System.out.println("Table de produit insiffusante");
+//            }
+//        } else {
+//            System.out.println("Prouit déja exist");
+//        }
+//    }
+     
     public void ajoutProd(Produit prod) throws MagasinPleinException, PrixNegatifException {
         if (!chercheProd(prod)) {
             if (capacite > prodTabSize) {

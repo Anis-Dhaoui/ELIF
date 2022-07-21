@@ -78,7 +78,7 @@ public class Magasin extends Employes{
                     break;
                 }
             }
-            for(int i = index; i < capacite; i++) {
+            for(int i = index; i < capacite - 1; i++) {
                 produits[i] = produits[i+1];
             }
             produits[capacite-1] = null;
