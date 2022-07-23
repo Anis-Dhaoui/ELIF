@@ -43,7 +43,7 @@ public class MainTuniprod {
         Vendeur v3 = new Vendeur(98, 3, "Kamel barouch", "Sousse", 8);
         Vendeur v4 = new Vendeur(110, 4, "Omar Zawali", "Ben Garden", 8);
 
-        Responsable r1 = new Responsable(221.5f, 1, "Abou Baker", "Irak", 2);
+        Responsable r1 = new Responsable(221.5f, 1, "Jamila", "Irak", 2);
         Responsable r2 = new Responsable(125.8f, 2, "Raouf Donya", "Baghdad", 4);
 
         m1.ajoutEmp(c1);

@@ -99,7 +99,6 @@ public class Magasin {
             } else {
                 throw new MagasinPleinException("Le magasin est plein");
             }
-
         } else {
             System.out.println("Prouit déja exist");
         }
